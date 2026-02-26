@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amrutha Suresh | Cyber Security Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background:#0f172a;
+    color:white;
+}
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+header h1{
+    font-size:3rem;
+    color:#38bdf8;
+}
+header p{
+    margin:15px 0;
+    font-size:1.2rem;
+}
+.btn{
+    padding:10px 20px;
+    background:#38bdf8;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    color:#0f172a;
+    font-weight:bold;
+}
+section{
+    padding:60px 10%;
+}
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+.skills-bar{
+    margin:15px 0;
+}
+.bar{
+    height:10px;
+    background:#1e293b;
+    border-radius:10px;
+}
+.progress{
+    height:10px;
+    background:#38bdf8;
+    border-radius:10px;
+    width:0;
+}
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin:15px 0;
+    transition:0.3s;
+}
+.card:hover{
+    transform:scale(1.05);
+}
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e293b;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Amrutha Suresh</h1>
+    <p>Cyber Security Student | Ethical Hacking Enthusiast | Developer</p>
+    <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<p>I am a B.Tech Computer Science (Cyber Security) student passionate about ethical hacking, Android development, and building secure systems. I actively participate in IEEE, IEDC, and technical initiatives.</p>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+
+<div class="skills-bar">
+<p>Java</p>
+<div class="bar"><div class="progress" data-width="80%"></div></div>
+</div>
+
+<div class="skills-bar">
+<p>Python</p>
+<div class="bar"><div class="progress" data-width="75%"></div></div>
+</div>
+
+<div class="skills-bar">
+<p>Cyber Security Tools</p>
+<div class="bar"><div class="progress" data-width="85%"></div></div>
+</div>
+
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>JYOTHI 360</h3>
+<p>Centralized academic resource platform for first-year students.</p>
+</div>
+
+<div class="card">
+<h3>Spyware Simulation using MSFVenom</h3>
+<p>Ethical lab-based spyware demonstration for cybersecurity learning.</p>
+</div>
+
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: amruthasuresh816@gmail.com</p>
+<p>Phone: 8169124351</p>
+</section>
+
+<footer>
+<p>© 2026 Amrutha Suresh | Cyber Security Portfolio</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+window.onload = function(){
+    let bars = document.querySelectorAll(".progress");
+    bars.forEach(bar=>{
+        bar.style.width = bar.getAttribute("data-width");
+    });
+}
+</script>
+
+</body>
+</html>
